@@ -2,8 +2,10 @@
 
 require_once __DIR__ . '/functions.php';
 
+//Problema: Variáveis globais
 $color = null;
 $doors = null;
+$model = null;
 $acceleration = null;
 $headlightsOn = false;
 $manualTransmission = null;

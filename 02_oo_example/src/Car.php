@@ -4,6 +4,7 @@ class Car
 {
     private string $color;
     public readonly int $doors;
+    public readonly string $model;
     private int $speed;
     private bool $headlightsOn;
     public readonly bool $manualTransmission;
