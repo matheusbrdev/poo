@@ -1,6 +1,6 @@
 <?php
 
-function showMessage(array $messages): void {
+function mostrarMensagem(array $messages): void {
     echo PHP_EOL . "------------------------" . PHP_EOL;
 
     foreach ($messages as $message) {
