@@ -8,14 +8,15 @@ class Carro
     public bool $faroisLigados;
     public bool $transmissaoManual;
 
-    public function setCor(string $cor): void
+    public function __construct(int $portas, string $cor)
     {
+        $this->portas = $portas;
         $this->cor = $cor;
     }
 
-    public function setPortas(int $portas): void 
+    public function getCor(): string 
     {
-        $this->portas = $portas;
+        return $this->cor;
     }
 
     public function setVelocidade(int $velocidade): void
