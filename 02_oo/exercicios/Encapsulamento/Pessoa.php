@@ -12,11 +12,8 @@ class Pessoa
     public function __construct(string $nome, int $idade, string $corDosOlhos, string $genero, float $altura, float $peso)
     {
         $this->nome = $nome;
-        $this->setIdade($idade);
         $this->setCorDosOlhos($corDosOlhos);
         $this->setGenero($genero);
-        $this->altura = $altura;
-        $this->peso = $peso;
     }
 
     public function getNome(): string
@@ -29,7 +26,7 @@ class Pessoa
         return $this->idade;
     }
 
-    private function setIdade(int $idade): void 
+    public function setIdade(int $idade): void 
     {
         if (($idade < 0) || ($idade > 100)) {
             echo "Idade informada é invalida" . PHP_EOL;
@@ -79,8 +76,29 @@ class Pessoa
     {
         return $this->altura;
     }
+
+    public function setAltura(float $altura): void 
+    {
+        if(($altura < 0) || ($altura > 2.20)){
+            echo "Altura inválida";
+            exit();
+        }
+
+        $this->altura = $altura;
+    }
+
     public function getPeso(): float
     {
         return $this->peso;
+    }
+
+    public function setPeso(float $peso): void
+    {
+        if(($peso < 0) && ($peso > 140) ) {
+            echo "Peso inválido";
+            exit();
+        }
+        
+        $this->peso = $peso;
     }
 }
