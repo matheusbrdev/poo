@@ -2,11 +2,16 @@
 
 require_once 'Pessoa.php';
 
-/*$pessoaValida = new Pessoa('Jose', 20, 'Azul', 'Masculino', 1.80, 70);
+$pessoaValida = new Pessoa('Jose', 'Azul', 'Masculino');
+$pessoaValida
+    ->setIdade(45)
+    ->setAltura(1.80)
+    ->setPeso(70);
 
 var_dump($pessoaValida);
 
-$pessoaOlhosInvalidos = new Pessoa('Maria', 20, 'Rosa', 'Feminino', 1.80, 70);
+
+/*$pessoaOlhosInvalidos = new Pessoa('Maria', 20, 'Rosa', 'Feminino', 1.80, 70);
 
 var_dump($pessoaOlhosInvalidos);
 
