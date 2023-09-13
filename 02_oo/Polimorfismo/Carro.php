@@ -2,6 +2,8 @@
 
 namespace Polismorfirmo;
 
+use DomainException;
+
 abstract class Carro
 {
     protected string $cor;
@@ -43,8 +45,7 @@ abstract class Carro
         $opcoes = ['Manual', 'Auto'];
 
         if(!(in_array($transmissao, $opcoes))) {
-            echo 'Transmissão inválida!';
-            exit();
+            throw new DomainException('Transmissao invalida');
         }
 
         $this->transmissao = $transmissao;
